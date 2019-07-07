@@ -1,4 +1,4 @@
-FROM circleci/android:api-25-alpha
+FROM circleci/android:api-28-alpha
 
 ###################
 # GitHub Action description
