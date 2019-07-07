@@ -1,4 +1,4 @@
-FROM vgaidarji/docker-android-build:1.0.0
+FROM circleci/android:api-API_LEVEL-alpha
 
 ###################
 # GitHub Action description
@@ -11,6 +11,9 @@ LABEL "com.github.actions.color"="green"
 LABEL "repository"="https://github.com/vgaidarji/android-github-actions/build"
 LABEL "homepage"="https://github.com/vgaidarji/android-github-actions"
 LABEL "maintainer"="Veaceslav Gaidarji <veaceslav.gaidarji@gmail.com>"
+
+RUN sudo apt-get install ruby ruby-dev ruby-build
+RUN sudo gem install fastlane
 
 COPY entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
