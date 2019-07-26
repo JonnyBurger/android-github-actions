@@ -12,6 +12,7 @@ LABEL "repository"="https://github.com/vgaidarji/android-github-actions/build"
 LABEL "homepage"="https://github.com/vgaidarji/android-github-actions"
 LABEL "maintainer"="Veaceslav Gaidarji <veaceslav.gaidarji@gmail.com>"
 
+RUN chown -R $(whoami): ~/.bundle
 RUN sudo apt-get update
 RUN sudo apt-get install ruby ruby-dev ruby-build
 RUN sudo gem install fastlane
